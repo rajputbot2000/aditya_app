@@ -22,13 +22,13 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  url: postgres://aditya_0dui_user:DdrBpNxBgw77ZzOUGDqzxaunpcs3QdnG@dpg-chacl42k728r88158nkg-a/aditya_0dui
 
-# production:
-#   # <<: *default
-#   adapter: postgresql
-#   encoding: unicode 
-#   database: aditya_10td
-#   pool: 5
-#   username: aditya_10td_user
-#   password: uAbx4hRycAWlEfmZwpZsiSHixhSepZvu
+production:
+  # <<: *default
+  adapter: postgresql
+  encoding: unicode 
+  database: aditya_0dui
+  pool: 5
+  username: aditya_0dui_user
+  password: DdrBpNxBgw77ZzOUGDqzxaunpcs3QdnG
