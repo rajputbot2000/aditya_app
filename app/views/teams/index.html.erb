@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container-fluid" id="teams">
+<h1>Teams</h1>
+
+<table class="table table-success table-striped table-hover" style="text-align: center;">
+  <thead>
+    <tr>
+    <th>Name</th>
+    <th>Code</th>
+    <th>Logo</th>
+    <th>Show</th>
+    <th>Players</th>
+    </tr>
+  </thead>
+  <% @teams.each do |team| %>
+  <tr>
+    <%= render team %>
+     <td><%= link_to "Show this team", team , class: "btn btn-info" %></td>
+     <td><%= link_to "Show players", players_path(id: team.id), class: "btn btn-info" %></td>
+  </tr>
+  <% end %>
+</table>
+  <%= link_to "New team", new_team_path %>
+</div>
+
+

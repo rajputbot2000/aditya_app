@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container-fluid" >
+  <!-- <center> -->
+<h1>Earnings</h1>
+<%= link_to "New point", new_point_path, class: "btn btn-primary" %>
+
+<table class="table table-info table-striped table-hover" style="text-align: center;">
+  <thead>
+    <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Logo</th>
+    <th>Coins</th>
+    <th>Account_id</th>
+    <th>Show</th>
+    <th>Destroy</th>
+    </tr>
+  </thead>
+
+  <% @points.each.each_with_index do |point,index| %>
+  <tr>
+    <td><%= index+1 %></td>
+    <%= render point %>
+    <td>
+      <%= link_to "Show this point", point , class: "btn btn-info" %>
+    </td>
+    <td>
+      <%= button_to "Destroy this point", point, method: :delete, class: "btn btn-danger" %>    
+    </td>
+  </tr>
+  <% end %>
+<!-- </center> -->
+</table>
+</div>

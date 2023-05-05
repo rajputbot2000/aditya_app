@@ -1,0 +1,29 @@
+<p style="color: green"><%= notice %></p>
+<div class="container-fluid">
+
+<h1>Accounts</h1>
+<%= link_to "New account", new_account_path, class: "btn btn-primary" , style: "float:right" %>
+
+<br>
+<table class="table table-info table-striped table-hover" style="text-align: center;">
+  <thead>
+    <tr>
+    <th>Sr.No</th>
+    <th>User_ID</th>
+    <th>coin_balance</th>
+    <th>Refer_code</th>
+    <th>Show</th>
+    </tr>
+  </thead>
+  <% @accounts.each_with_index do |account,index| %>
+  <tr>
+    <td><%= index+1 %></td>
+    <%= render account %>
+    <td>
+      <%= link_to "Show this account", account , class: "btn btn-info" %>
+    </td>
+  </tr>
+  <% end %>
+</div>
+
+</table>

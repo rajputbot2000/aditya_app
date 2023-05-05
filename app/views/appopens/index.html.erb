@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+<div class="container-fluid">
+
+  <h1>Appopens</h1>
+  <%= link_to "New appopen", new_appopen_path, class: 'btn btn-info' %>
+<table class="table table-info table-striped table-hover" style="text-align: center;">
+  <thead>
+    <tr>
+    <th>Id</th>
+    <th>version_name</th>
+    <th>version_name</th>
+    <th>Location</th>
+    <th>Source_Ip</th>
+    <th>User_id</th>
+    <th>Show</th>
+    </tr>
+  </thead>
+
+  <% @appopens.each do |appopen| %>
+  <tr>
+    <%= render appopen %>
+    <td>
+      <%= link_to "Show this appopen", appopen, class: 'btn btn-primary' %>
+    </td>
+  </tr>
+  <% end %>
+</div>
+

@@ -1,0 +1,2 @@
+class GamePoint < ApplicationRecord
+end

@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container-fluid">
+  <h1>User profiles</h1>
+  <%= link_to "New user profile", new_user_profile_path, class: "btn btn-primary" %>
+
+<table class="table table-success table-striped table-hover" style="text-align: center;">
+  <thead>
+    <tr>
+
+    <th>Sr No</th>
+    <th>Full Name</th>
+    <th>Email</th>
+    <th>Mobile Number</th>
+    <th>Gender</th>
+    <th>Location</th>
+    <th>Occupation</th>
+    <th>Birth date</th>
+    <th>Profile Pic</th>
+    <th>User_id</th>
+    <th>Show</th>
+    </tr>
+  </thead>
+  
+  <% @user_profiles.each_with_index do |user_profile,index| %>
+  <tr>
+     <td><%= index+1 %></td>
+    <%= render user_profile %>
+    <td>
+      <%= link_to "Show this user profile", user_profile, class: "btn btn-primary" %>
+    </td>
+  </tr>
+  <% end %>
+</div>
+

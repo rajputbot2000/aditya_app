@@ -1,0 +1,28 @@
+<div class="container-fluid">
+<p style="color: green"><%= notice %></p>
+<table class="table table-dark table-striped table-hover">
+  <thead>
+    <tr>
+    <th>Title</th>
+    <th>Short_title</th>
+    <th>Views</th>
+    <th>Is_Live</th>
+    <th>Status</th>
+    <th>Front_team</th>
+    <th>Opp_team</th>
+    <th>Edit</th>
+    <th>Show</th>
+    <th>Destroy</th>
+
+    </tr>
+  </thead>
+  <tr>
+   <%= render @match %>
+
+  <td><%= link_to "Edit this match", edit_match_path(@match) %></td>
+  <td><%= link_to "Back to matches", matches_path %></td>
+
+  <td><%= button_to "Destroy this match", @match, method: :delete %></td>
+  </tr>
+</table>
+</div>

@@ -1,0 +1,47 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container-fluid">
+<h1>Users</h1>
+<%= link_to "New user", new_user_path , class: "btn btn-outline-info" %>
+
+<table class="table table-dark table-striped table-hover" style="text-align: center;">
+  <thead>
+    <tr>
+    <th>deviceId</th>
+    <th>deviceType</th>
+    <th>deviceName</th>
+    <th>socialType</th>
+    <th>socialId</th>
+    <th>socialToken</th>
+    <th>socialEmail</th>
+    <th>socialName</th>
+    <th>socialImgurl</th>
+    <th>advertisingId</th>
+    <th>versionName</th>
+    <th>versionCode</th>
+    <th>utmSource</th>
+    <th>utmMedium</th>
+    <th>utmTerm</th>
+    <th>utmContent</th>
+    <th>utmCampaign</th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </tr>
+  </thead>
+  <% @users.each do |user| %>
+  <tr>
+    <%= render user %>
+    <td>
+      <%= link_to "Show", user , class: "btn btn-outline-info" %>
+    </td>
+    <td>
+      <%= link_to "Edit", edit_user_path(user), class: "btn btn-outline-warning"  %> 
+    </td>
+    <td>
+      <%= button_to "Destroy", user, method: :delete, class: "btn btn-outline-danger"  %>
+    </td>
+  </tr>
+  <% end %>
+</div>
+

@@ -1,0 +1,81 @@
+<div class="container-fluid">
+        <nav class="navbar navbar-dark bg-dark bg-gradient fixed-top">
+            <div class="container-fluid">
+                <%= link_to "CricGuru" , matches_path, class: "navbar-brand ps-3"%>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">CricGuru</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <%= link_to "Users", users_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%>
+                        </li>
+                        <li class="nav-item">
+                          <%= link_to "User Profile", user_profiles_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%>
+                        </li>
+                        <li class="nav-item">
+                          <%= link_to "Appopen", appopens_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%>
+                        </li>
+                        <li class="nav-item">
+                          <%= link_to "Accounts", accounts_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "Matches", matches_path, class: "nav-link " %>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "Teams", teams_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "Players", players_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "News", news_index_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "Rewards", rewards_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%>
+                        </li>
+                        
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Transactions
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><%= link_to "Earnings", points_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%></li>
+                            <li><%= link_to "Withdrawls", withdrawls_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Offers
+                       </a>
+                        <ul class="dropdown-menu dropdown-menu-dark"> 
+                            <li><%= link_to "Task Offers", tasks_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%></li>
+                            <li><%= link_to "Game Point", game_points_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%></li>
+                            <li><%= link_to "Applists", applists_path, class: "nav-link collapsed sb-nav-link-icon fas fa-columns sb-sidenav-collapse-arrow fas fa-angle-down"%></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                  </form> -->
+                </div>
+              </div>
+            </div>
+          </nav>
+
+              <div class="small">Logged in as:</div>
+              Start Bootstrap
+          </div>
+  
+  <div id="layoutSidenav_content">
+    <main>
+        <%= yield %>
+    </main>
+  </div>

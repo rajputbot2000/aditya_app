@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <p style="color: green"><%= notice %></p>
+  <div class="d-flex justify-content-between align-items-center">
+    <h1>News </h1>
+    <%= link_to "Add news", new_news_path, class: "btn btn-info" %>
+  </div>
+    
+    <table class="table table-info table-striped table-hover" style="text-align: center;">
+      <thead>
+        <tr>
+        <th>News</th>
+        <th>Team</th>
+        <th>Edit</th>
+        <th>Show</th>
+        <th>Delete </th>
+        </tr>
+      </thead>
+
+      <% @news.each do |news| %>
+      <tr>  
+        <%= render news %>
+        <td> <%= link_to "Edit news", edit_news_path(news), class: "btn btn-info" %> </td>
+        <td> <%= link_to "Show this news", news, class: "btn btn-info" %> </td>
+        <td> <%= button_to "Destroy this match", news, method: :delete, class: "btn btn-danger" %></td>
+      </tr>
+      <% end %>
+
+    </table>
+</div>
+

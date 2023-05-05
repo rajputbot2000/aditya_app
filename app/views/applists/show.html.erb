@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @applist %>
+
+<div>
+  <%= link_to "Edit this applist", edit_applist_path(@applist) %> |
+  <%= link_to "Back to applists", applists_path %>
+
+  <%= button_to "Destroy this applist", @applist, method: :delete %>
+</div>

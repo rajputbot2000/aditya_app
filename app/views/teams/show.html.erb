@@ -1,0 +1,25 @@
+<div class="container-fluid">
+<p style="color: green"><%= notice %></p>
+
+
+<table class="table table-dark table-striped table-hover">
+  <thead>
+    <tr>
+    <th></th>
+    <th>News</th>
+    <th>Name</th>
+    <th>Edit</th>
+    <th>Show</th>
+    <th>Destroy</th>
+    </tr>
+  </thead>
+  <tr>
+      <td><%= render @team.news %></td>
+
+      <td><%= link_to "Edit this team", edit_team_path(@team) %> </td>
+      <td><%= link_to "Back to teams", teams_path %></td>
+
+      <td><%= button_to "Destroy this team", @team, method: :delete %></td>
+
+  </tr>
+</div>

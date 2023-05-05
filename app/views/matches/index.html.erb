@@ -1,0 +1,35 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container-fluid">
+  
+<h1>Matches</h1>
+
+<table class="table table-info table-striped table-hover" style="text-align: center;">
+  <thead>
+    <tr>
+    <th>Title</th>
+    <th>Short_title</th>
+    <th>Views</th>
+    <th>Is_Live</th>
+    <th>Status</th>
+    <th>Front_team</th>
+    <th>Opp_team</th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </tr>
+  </thead>
+  <% @matches.each do |match| %>
+  <tr>
+
+    <%= render match %>
+    
+   <td> <%= link_to "Show this match", match, class: "btn btn-info" %></td>
+   <td><%= link_to "Edit this match", edit_match_path(match), class: "btn btn-warning" %></td>
+   <td><%= button_to "Destroy this match", @match, method: :delete, class: "btn btn-danger" %></td>
+  </tr> 
+  <% end %>
+</table>
+
+  <%= link_to "New match", new_match_path , class: "btn btn-primary" %>
+</div>

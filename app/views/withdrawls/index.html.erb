@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+<div class="container-fluid">
+
+<h1>Withdrawls</h1>
+<!-- <%= link_to "New withdrawl", new_withdrawl_path, class: "btn btn-info" %> -->
+<!-- <br><br> -->
+<table class="table table-success table-striped table-hover" style="text-align: center;">
+  <thead>
+    <tr>
+    <th>Coins</th>
+    <th>Transaction_id</th>
+    <th>Amount</th>
+    <th>Account_id</th>
+    <!-- <th>Show</th>
+    <th>Show</th>
+    <th>Show</th> -->
+    </tr>
+  </thead>
+  <% @withdrawls.each do |withdrawl| %>
+  <tr>
+    <%= render withdrawl %>
+    <!-- <td>
+      <%= link_to "Show this withdrawl", withdrawl, class: "btn btn-info"%>
+    </td>
+    <td>
+      <%= link_to "Edit this withdrawl", edit_withdrawl_path(withdrawl), class: "btn btn-info" %>   
+     </td>
+    <td>
+      <%= button_to "Destroy this withdrawl", @withdrawl, method: :delete, class: "btn btn-danger" %>
+    </td> -->
+  </tr>
+  <% end %>
+</div>
+

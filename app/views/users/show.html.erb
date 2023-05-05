@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+<table class="table table-success table-striped table-hover">
+  <thead>
+    <tr>
+    <th>deviceId</th>
+    <th>deviceType</th>
+    <th>deviceName</th>
+    <th>socialType</th>
+    <th>socialId</th>
+    <th>socialToken</th>
+    <th>socialEmail</th>
+    <th>socialName</th>
+    <th>socialImgurl</th>
+    <th>advertisingId</th>
+    <th>versionName</th>
+    <th>versionCode</th>
+    <th>utmSource</th>
+    <th>utmMedium</th>
+    <th>utmTerm</th>
+    <th>utmContent</th>
+    <th>utmCampaign</th>
+    <th>Show</th>
+    </tr>
+  </thead>
+<%= render @user %>
+
+  <%= link_to "Back to users", users_path %>
+
+</div>

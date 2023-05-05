@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+<div class="container-fluid">
+<h1>Players</h1>
+<%= link_to "New player", new_player_path ,class: "btn btn-primary"%>
+
+<table class="table table-info table-striped table-hover" style="text-align: center;">
+  <thead>
+    <tr>
+    <th>Name</th>
+    <th>Score</th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Destroy</th>
+    </tr>
+  </thead>
+  <% @players.each do |player| %>
+  <tr>
+    <%= render player %>
+    
+     <td> <%= link_to "Show this player", player, class: "btn btn-info" %></td>
+     <td> <%= link_to "Edit this player", edit_player_path(player), class: "btn btn-warning" %> </td>
+     <td> <%= link_to "Destroy this player", player, method: :delete , class: "btn btn-danger" %></td>
+  </tr>
+  <% end %>
+
+
+  
+</div>
+
+

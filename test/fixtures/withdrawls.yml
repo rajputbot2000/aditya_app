@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coins: 1
+  transaction_id: 1
+  amount: 1
+  account: one
+
+two:
+  coins: 1
+  transaction_id: 1
+  amount: 1
+  account: two

@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container-fluid">
+<h1>Rewards</h1>       
+
+<%= link_to "New reward", new_reward_path, class:"btn btn-primary", style:"text-align: right;" %>
+
+<table class="table table-info table-striped table-hover" style="text-align: center;">
+  <thead>
+    <tr>
+    <th>Name</th>
+    <th>Logo</th>
+    <th>Payout_Type</th>
+    <th>Payout_Amount</th>
+    <th>Coin_value</th>
+    <th>Show</th>
+    </tr>
+  </thead>
+  <% @rewards.each do |reward| %>
+  <tr>
+    <%= render reward %>
+    <td>
+      <%= link_to "Show this reward", reward %>
+    </td>
+  </tr>
+  <% end %>
+</div>
+
